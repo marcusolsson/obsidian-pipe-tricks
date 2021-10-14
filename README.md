@@ -1,5 +1,8 @@
 # Pipe tricks for Obsidian
 
+[![Build Obsidian plugin](https://github.com/marcusolsson/obsidian-pipe-tricks/actions/workflows/release.yml/badge.svg)](https://github.com/marcusolsson/obsidian-pipe-tricks/actions/workflows/release.yml)
+[![Buy me a coffee](https://img.shields.io/badge/-buy_me_a%C2%A0coffee-gray?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/marcusolsson)
+
 An Obsidian that adds [pipe tricks](https://en.wikipedia.org/wiki/Help:Pipe_trick) to the Wikilink format used by Obsidian.
 
 From Wikipedia:
