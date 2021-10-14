@@ -9,7 +9,7 @@ export default class ExamplePlugin extends Plugin {
 }
 
 // getInternalLinks returns all links generated from the [[double bracket syntax]].
-export function getInternalLinks(element: HTMLElement) {
+function getInternalLinks(element: HTMLElement) {
   const links = element.querySelectorAll("a");
 
   const internalLinks = [];
@@ -26,7 +26,7 @@ export function getInternalLinks(element: HTMLElement) {
 
 // updateLinkText automatically generates an alias for any empty internal links,
 // i.e. there's no text on the right side of the vertical bar, e.g. [[apple|]].
-export function updateLinkText(link: HTMLAnchorElement) {
+function updateLinkText(link: HTMLAnchorElement) {
   const text = link.innerText;
   const href = link.getAttr("href");
 
