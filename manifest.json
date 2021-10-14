@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-pipe-tricks",
+  "name": "Pipe tricks",
+  "version": "1.0.0",
+  "minAppVersion": "0.9.12",
+  "description": "Adds support for pipe tricks in Obsidian.",
+  "author": "Marcus Olsson",
+  "authorUrl": "https://marcus.se.net",
+  "isDesktopOnly": false
+}
