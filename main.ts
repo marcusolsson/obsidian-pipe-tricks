@@ -1,27 +1,14 @@
 import { Plugin } from "obsidian";
 
-export default class ExamplePlugin extends Plugin {
+const FINAL_PAREN = /\s\(.*\)$/;
+const FINAL_COMMA = /,.*$/;
+
+export default class PipeTricksPlugin extends Plugin {
   async onload() {
     this.registerMarkdownPostProcessor((element) => {
-      getInternalLinks(element).forEach(updateLinkText);
+      element.querySelectorAll("a.internal-link").forEach(updateLinkText);
     });
   }
-}
-
-// getInternalLinks returns all links generated from the [[double bracket syntax]].
-function getInternalLinks(element: HTMLElement) {
-  const links = element.querySelectorAll("a");
-
-  const internalLinks = [];
-  for (let index = 0; index < links.length; index++) {
-    const link = links.item(index);
-
-    if (link.hasClass("internal-link")) {
-      internalLinks.push(link);
-    }
-  }
-
-  return internalLinks;
 }
 
 // updateLinkText automatically generates an alias for any empty internal links,
@@ -32,16 +19,13 @@ function updateLinkText(link: HTMLAnchorElement) {
 
   // Check for missing alias.
   if (!text) {
-    const finalParen = /\s\(.*\)$/;
-    const finalComma = /,.*$/;
-
-    const hasFinalParenthesis = new RegExp(finalParen).test(href);
+    const hasFinalParenthesis = FINAL_PAREN.test(href);
 
     // Suppress final parenthesis if it exists, otherwise suppress final part
     // beginning with a comma.
     link.innerText = hasFinalParenthesis
-      ? href.replace(finalParen, "")
-      : href.replace(finalComma, "");
+      ? href.replace(FINAL_PAREN, "")
+      : href.replace(FINAL_COMMA, "");
 
     blendSuffix(link);
   }
