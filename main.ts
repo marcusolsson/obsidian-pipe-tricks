@@ -36,7 +36,7 @@ function updateLinkText(link: HTMLAnchorElement) {
 function blendSuffix(link: HTMLElement) {
   const sibling = link.nextSibling;
 
-  if (sibling.nodeType !== Node.TEXT_NODE) {
+  if (sibling === null || sibling.nodeType !== Node.TEXT_NODE) {
     return;
   }
 
