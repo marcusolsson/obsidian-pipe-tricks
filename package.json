@@ -4,16 +4,24 @@
   "description": "Adds support for pipe tricks in Obsidian.",
   "main": "main.js",
   "scripts": {
-    "dev": "esbuild main.ts --bundle --external:obsidian --outdir=.  --target=es2016 --format=cjs --sourcemap=inline --watch",
-    "build": "esbuild main.ts --bundle --external:obsidian --outdir=.  --target=es2016 --format=cjs"
+    "dev": "esbuild src/main.ts --bundle --external:obsidian --outdir=.  --target=es2016 --format=cjs --sourcemap=inline --watch",
+    "build": "esbuild src/main.ts --bundle --external:obsidian --outdir=.  --target=es2016 --format=cjs",
+    "check": "tsc --noEmit --watch",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet --fix"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^16.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
     "esbuild": "0.13.8",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "obsidian": "^0.12.17",
+    "prettier": "^2.4.1",
     "tslib": "2.3.1",
     "typescript": "4.4.4"
   }
