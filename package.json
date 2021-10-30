@@ -1,6 +1,6 @@
 {
   "name": "obsidian-pipe-tricks",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Adds support for pipe tricks in Obsidian.",
   "main": "main.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "obsidian": "^0.12.17",
     "prettier": "^2.4.1",
+    "text-case": "^1.0.9",
     "tslib": "2.3.1",
     "typescript": "4.4.4"
   }
