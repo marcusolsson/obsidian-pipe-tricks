@@ -34,7 +34,8 @@ These examples are also used as test cases:
 You can also transform link text using __pipe functions__.
 
 
-Your links must still end in `|`, but additional `|` before that transforms your text using built-in pipe functions.
+Your links must still end in `|`, but an additional `|` before that transforms your text using built-in pipe functions.
+
 
 For example: `[[Brewster Angle|_|]]s` ⟶ `[[brewster angles]]`
 
