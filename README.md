@@ -31,7 +31,8 @@ These examples are also used as test cases:
 
 ## Pipe functions
 
-Additionally one can easily transform link text using __pipe functions__.
+You can also transform link text using __pipe functions__.
+
 
 Your links must still end in `|`, but additional `|` before that transforms your text using built-in pipe functions.
 
