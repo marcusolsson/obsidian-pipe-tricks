@@ -13,7 +13,7 @@ export default class PipeTricksPlugin extends Plugin {
  * Determines whether a link with text attribute should be 'pipe tricked'
  */
 function shouldTrick(text: string): boolean {
-  return (!text || text.endsWith("|"))
+  return !text || text.endsWith('|')
 }
 
 // Use cases:
@@ -24,7 +24,7 @@ function shouldTrick(text: string): boolean {
 // updateLinkText automatically generates an alias for any empty internal links,
 // i.e. there's no text on the right side of the vertical bar, e.g. [[apple|]].
 function updateLinkText(link: HTMLAnchorElement) {
-  let alias = link.innerText
+  const alias = link.innerText
   const href = link.getAttr('href')
 
   // Text will be empty if the only pipe is at the end of the link i.e. [[apple|]]
@@ -32,7 +32,7 @@ function updateLinkText(link: HTMLAnchorElement) {
     // Find pipe tricks to use
     const functionNames = alias.split('|').filter(Boolean)
 
-    let functions = DEFAULT_FUNCTIONS
+    const functions = DEFAULT_FUNCTIONS
     for (const name of functionNames) {
       const func = FUNCTION_LOOKUP[name]
 
