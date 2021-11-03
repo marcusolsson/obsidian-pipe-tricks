@@ -1,5 +1,5 @@
 import { FINAL_COMMA, FINAL_PAREN, PUNCTUATION } from 'consts'
-import { titleCase, swapCase, upperCaseFirst, capitalCase } from 'text-case'
+import { titleCase, upperCaseFirst, capitalCase } from 'text-case'
 
 /**
  * Functions get passed a mutable html anchor element and the current text
@@ -28,8 +28,6 @@ export const FUNCTION_LOOKUP: Record<string, PipeFunction> = {
 
   title: title,
   '#': title,
-
-  swap: swap,
 }
 
 // Standard pipetrick
@@ -99,11 +97,6 @@ export function title(link: HTMLAnchorElement, text: string): string {
 // hello world -> Hello world
 export function upperFirst(link: HTMLAnchorElement, text: string): string {
   return upperCaseFirst(text)
-}
-
-// Hello World -> hELLO wORLD
-export function swap(link: HTMLAnchorElement, text: string): string {
-  return swapCase(text)
 }
 
 // hello of world -> Hello Of World

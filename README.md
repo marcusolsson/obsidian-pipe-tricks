@@ -57,4 +57,3 @@ List of built-in pipe functions:
 - `^^^`: alias for `upper`
 - `title`: _hello of world_ ⟶ _Hello of World_
 - `#`: alias for `title`
-- `swap`: _Hello World_ ⟶ _hHELLO wORLD_
